@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+</head>
+<body>
+    <section>
+        <h1>Meus Projetos</h1>
+        <p>Projetos que desenvolvi, o Blog é fictício</p>
+        <ul>
+            {% for chave, dados in projetos.items %}
+            <li>{{ dados.titulo}}</li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>
