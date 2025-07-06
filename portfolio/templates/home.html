@@ -1,31 +1,27 @@
-<!DOCTYPE html>
-<html lang="pt_br">
+{% extends 'base.html' %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfolio</title>
-</head>
+{% block title %} Home | Meu Portfólio {% endblock %}
 
-<body>
-    <section>
-        <h1>Sobre mim</h1>
-        <p>Olá, Me chamo Marcelo, sou desenvolvedor da Codertec</p>
-    </section>
-    <section>
-        <h2>Habilidades</h2>
-        <ul>
-            {% for habilidade, stack in habilidades.items %}
-            <li>{{ stack.nome }}</li>
-            {% endfor %}
-        </ul>
-    </section>
-    <section>
-        <h2>Contatos</h2>
-        <p>Email: <a href="mailto:marcelo@codertec.com.br">marcelo@codertec.com.br</a></p>
-        <p>Instagram: <a href="https://instagram.com/codertec_sistemas" target="_blank">codertec_sistemas</a></p>
-        <p>GitHub: <a href="https://github.com/marlevek" target="_blank">marlevek</a></p>
-    </section>
-</body>
+{% block content %}
+<section>
+    <h1>Sobre mim</h1>
+    <img src="{% static 'img/foto_marcelo.jpg' %}" alt="Minha foto" width="200" height="250">
+    <p>Olá, Me chamo Marcelo, sou desenvolvedor da Codertec</p>
+</section>
+<section>
+    <h2>Habilidades</h2>
+    <ul>
+        {% for habilidade, stack in habilidades.items %}
+        <li>{{ stack.nome }}</li>
+        {% endfor %}
+    </ul>
+</section>
+<section>
+    <h2>Contatos</h2>
+    <p>Email: <a href="mailto:marcelo@codertec.com.br">marcelo@codertec.com.br</a></p>
+    <p>Instagram: <a href="https://instagram.com/codertec_sistemas" target="_blank">codertec_sistemas</a></p>
+    <p>GitHub: <a href="https://github.com/marlevek" target="_blank">marlevek</a></p>
+</section>
 
-</html>
+{% endblock %}
