@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt_br">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes Projeto</title>
-</head>
+{% block title %} { {projeto.titulo} } | Meu Portólio{% endblock %}
 
-<body>
+{% block content %}
     <h1>{{ projeto.titulo }}</h1>
     <section>
         <h3>Detalhes do projeto</h3>
@@ -19,6 +14,4 @@
         <p>GitHub</p>
         <a href="{{ projeto.github }}" target="_blank">GitHub do projeto</a>
     </section>
-</body>
-
-</html>
+{% endblock %}
