@@ -12,8 +12,8 @@
 <section>
     <h2>Habilidades</h2>
     <ul>
-        {% for habilidade, stack in habilidades.items %}
-        <li>{{ stack.nome }}</li>
+        {% for habilidade in habilidades %}
+        <li>{{ habilidade.nome }}</li>
         {% endfor %}
     </ul>
 </section>
